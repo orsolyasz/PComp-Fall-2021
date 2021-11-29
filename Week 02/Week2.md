@@ -42,6 +42,8 @@ From testing this setup in a physical circuit and a Tinkercad setup as well, thi
 At three LEDs connected, the LEDs begin to dim, at 4, they don't light up at all.
 
 ![Tinkercad image showing 3 dim LEDs connected in serial](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/Serial%20LED%20Test.png)
+![Photo of 3 LEDs serially connected in a breadboard, they are on but two of them extremely dim](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/3LED-Serial.jpg)
+![Photo of 4 LEDs serially connected in a breadboard, they are not on at all](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/4LED-Serial.jpg)
 
 
 ### How many LEDs can you hook up with a 220Ω resistor in parallel?
@@ -164,12 +166,89 @@ void think()
   Serial.println(".");
   delay(500);
 }
-
-
 ```
 
 ![Screenshot of bot chat responses if the responder needs help](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/UnhelpfulMachine-Yes.png)
-![Screenshot of bot chat responses if the responder does not need help(https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/UnhelpfulMachine-No.png)
+![Screenshot of bot chat responses if the responder does not need help](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/UnhelpfulMachine-No.png)
 
 
 
+## Lab 02 - Potentiometers (Knobs)
+
+Here is my code for a Potentiometer to control the brightness of an LED. I was also curious to see how much a smoothing equation would affect the knob's impact on the light, so I experimented a bit with that, but just ended up keeping it commented out below as I did not see a significant difference (which seems to make sense with a knob).
+
+```
+byte ledPin =11;
+byte potPin = A0;
+
+int potValue=0;
+int ledValue=0;
+int ledTarget=0;
+
+void setup()
+{
+  delay(400);
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop()
+{
+  potValue= analogRead(potPin);
+  ledValue= map(potValue, 0, 1023, 0, 255);
+  //ledTarget=potValue;
+  
+  //ledValue=ledValue-(ledValue-ledTarget)*0.05;
+  
+  //Serial.print(potValue);
+  //Serial.print(",");
+  //Serial.println(ledValue);
+
+  analogWrite(ledPin, ledValue);
+}
+```
+
+Here is my wiring diagram and physical setup:
+
+![Tinkercad screenshot of a potentiometer and an LED connected to an Arduino Uno via a breadboard](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/Potentiometer-with-LED.png)
+![Image of an LED and a potentiometer connected to an Arduino Uno via a breadboard](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/LED-Potentiometer.jpg)
+
+## Lab 03 - Light Dependent Resistors
+
+Here is my code for an LDR to control the brightness of an LED. It is basically the same as above, except the numbers for the mapping range are different, as the range of values coming from the LDR is much smaller and with lower values. Given the smaller range and different mechanism, the incoming data is also not as smooth on its own as it was for the pot, so here I am using smoothing to make the LED change without jumpiness.
+
+```
+byte ledPin =11;
+byte ldrPin = A0;
+
+int ldrValue=0;
+int ledValue=0;
+int ledTarget=0;
+
+void setup()
+{
+  delay(400);
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop()
+{
+  ldrValue= analogRead(ldrPin);
+  ledTarget=map(ldrValue, 1, 39, 0, 255);
+  
+  ledValue=ledValue-(ledValue-ledTarget)*0.05;
+  
+  Serial.println(ldrValue);
+  //Serial.print(",");
+  //Serial.println(ledValue);
+
+  analogWrite(ledPin, ledValue);
+}
+```
+
+Here is my wiring diagram and physical setup:
+
+![Tinkercad screenshot of an LDR and an LED connected to an Arduino Uno via a breadboard](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/LDR-LED-Tinker.png)
+![Image of an LED and an LDR connected to an Arduino Uno via a breadboard the LDR is not covered, the LED is on](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/LDR-LED-on.jpg)
+![Image of an LED and an LDR connected to an Arduino Uno via a breadboard the LDR is covered, the LED is not on](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/LDR-LED-off.jpg)
