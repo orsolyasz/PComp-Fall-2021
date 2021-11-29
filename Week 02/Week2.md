@@ -84,7 +84,7 @@ n=220/(5/0.5)=22 LEDs hooked up in parallel.
 
 Obviously, if our LEDs are powered through a source that provides higher current, we could have more LEDs.
 
-*(Disclaimer: Confusingly, in testing this in Tinkercad I am able to line up about 35-36 LEDs to a 5V 500mA power supply without an issue. I am not sure why that is or where my calculations above would be off, but maybe it is only the simulation that is off as the power supply element is a bit finicky to use. I did not have 20+ LEDs to test this with physically, but I will try at some point.)*
+*(Disclaimer: Confusingly, in testing this in [Tinkercad](https://www.tinkercad.com/things/10RUG4jhJwq-led-voltage-drop-test/editel?sharecode=tCFQxqizOxRyy1MuqHPETv5tSEmU-f7ZWBSBlc1BSho) I am able to line up about 35-36 LEDs to a 5V 500mA power supply without an issue. I am not sure why that is or where my calculations above would be off, but maybe it is only the simulation that is off as the power supply element is a bit finicky to use. I did not have 20+ LEDs to test this with physically, but I will try at some point.)*
 
 ![Tinkercad image showing 35 LEDs connected in parallel](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/Parallel%20LED%20Test.png)
 
@@ -92,7 +92,7 @@ Obviously, if our LEDs are powered through a source that provides higher current
 ## Lab 01 - Serial Data Story
 
 
-For this lab, I created a mini (un)helpful machine. Code and screenshots of the mini story's two branches are below.
+For this lab, I created a mini (un)helpful machine. Code and [Tinkercad](https://www.tinkercad.com/things/k7yTJEfIG5u-serial-story/editel?sharecode=UmDBjt008TeCs5V7xzIVgiV9OaORmBbtavxoB2J3KDo) screenshots of the mini story's two branches are below.
 
 ```
 bool startUp = true;
@@ -208,7 +208,7 @@ void loop()
 }
 ```
 
-Here is my wiring diagram and physical setup:
+Here is my wiring diagram from [Tinkercad](https://www.tinkercad.com/things/gIJUbbWlhq4-pot-ldr-tilt-led-control/editel?sharecode=GUPORPcPk-2q8_CoKlePIML9vyNZAyp_25dJrqXx6iQ) and my physical setup: 
 
 ![Tinkercad screenshot of a potentiometer and an LED connected to an Arduino Uno via a breadboard](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/Potentiometer-with-LED.png)
 ![Image of an LED and a potentiometer connected to an Arduino Uno via a breadboard](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/LED-Potentiometer.jpg)
@@ -247,8 +247,248 @@ void loop()
 }
 ```
 
-Here is my wiring diagram and physical setup:
+Here is my [Tinkercad](https://www.tinkercad.com/things/gIJUbbWlhq4-pot-ldr-tilt-led-control/editel?sharecode=GUPORPcPk-2q8_CoKlePIML9vyNZAyp_25dJrqXx6iQ) wiring diagram and my physical setup:
 
 ![Tinkercad screenshot of an LDR and an LED connected to an Arduino Uno via a breadboard](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/LDR-LED-Tinker.png)
 ![Image of an LED and an LDR connected to an Arduino Uno via a breadboard the LDR is not covered, the LED is on](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/LDR-LED-on.jpg)
 ![Image of an LED and an LDR connected to an Arduino Uno via a breadboard the LDR is covered, the LED is not on](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/LDR-LED-off.jpg)
+
+
+## Lab 04 - Playing with Common Sensors
+
+For this part of the lab, I decided to look at a [tilt switch](https://learn.adafruit.com/tilt-sensor/using-a-tilt-sensor). I tried both the simple battery and the Arduino setup in tinkercad. I also tried the same in a physical setup but my tilt switch fell apart when I first plugged it in :( The code I used was taken directly from the link above.
+
+Here is my wiring diagram from [Tinkercad](https://www.tinkercad.com/things/gIJUbbWlhq4-pot-ldr-tilt-led-control/editel?sharecode=GUPORPcPk-2q8_CoKlePIML9vyNZAyp_25dJrqXx6iQ):
+
+![Tinkercad screenshot of a tilt switch connected directly to an LED and 2 AA batteries, and another one connected to an Arduino to control a LED on the same circuit](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/Tilt-Switch-Tinker.png)
+
+
+## Lab 05 
+
+I have a confession to make. I have killed.
+
+I have killed so many house plants I can't even remember! I am usually pretty good at being caring and attentive, and I even (mostly) remember to water them regularly-- and yet, many of them, sadly, are not with us anymore.
+
+That's why I'm happy to introduce you to the Happy Plant monitoring pot! 
+
+![Handdrawn sketch of a potted plant. The pot has a smiley face of LEDs and a temp and a light sensor built in](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/HappyPlant.jpg)
+
+This plant pot helps you easily monitor the light and temperature conditions of your plant, to make sure you are taking care of all of your plant's needs. If you've ever been confused about why your dear plant baby that you have been watering so diligently just died, this pot is for you! with a built in temp sensor with adjustable settings, the pot will make sure your plant is never too cold or hot. The light sensor in the pot helps warn you if the plant has not been receiving enough light for too long (for over 8 hours/a night's time by default). Whenever your plants conditions are unideal, the pot will warn you with a nice big red sad face. Fix the conditions, and the lights will change back to a green smiley once you've got a Happy Plant!
+
+[Tinkercad](https://www.tinkercad.com/things/gAJiEAUBMpD-plant-monitor/editel?sharecode=OUMlEQ0rGYFAuaYqaRqen2gKbaj-nj88KC7kkXIeI88) image of my wiring diagram and the code to run it are below:
+
+![Arduino with three breadboards. One board with light and a temp meter, one with a smiley of LEDS, one with a sad face of LEDs.](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/HappyPlant-Tinker.png)
+
+```
+byte redLEDs = 9;
+byte greenLEDs = 3;
+byte tempSens = A5;
+byte lightSens = A0;
+
+int temp = 0;
+int light = 0;
+
+int minTemp = 141; //about 18 degrees C
+int maxTemp = 155; //about 25 degrees C
+
+int minLight = 15;
+int lightCycle = 28800000; //8 hours in msec
+//int lightCycle = 5000; // 5 sec, for testing
+
+long darkStart = 0;
+long currentTime = 0;
+bool dark = false;
+
+bool happy = true;
+
+
+void setup()
+{
+  delay(300);
+  Serial.begin(9600);
+  pinMode(redLEDs, OUTPUT);
+  pinMode(greenLEDs, OUTPUT);
+  
+}
+
+void loop()
+{
+  temp = analogRead(tempSens);
+  light = analogRead(lightSens);
+  
+  Serial.print(temp);
+  Serial.print(",");
+  Serial.println(lightSens);
+  
+  if(temp<minTemp || temp>maxTemp){
+    happy=false;
+  } else {
+    happy=true;
+  }
+  
+  currentTime = millis();
+  
+  if (light<minLight){
+    if(dark==false){
+     dark = true;
+     darkStart = currentTime;
+    } else if (dark==true){
+      if (currentTime-darkStart>lightCycle){
+      happy= false;
+      }
+    }
+  }
+  
+  Serial.println(happy);
+  
+  
+  
+  if(happy){
+  	digitalWrite(greenLEDs, HIGH);
+  	digitalWrite(redLEDs, LOW);
+  } else {
+    digitalWrite(greenLEDs, LOW);
+  	digitalWrite(redLEDs, HIGH);
+  }
+  
+}
+```
+
+## Lab 06 - DIY Pressure Sensor for an Embodied Computing  
+
+Following the provided guide, I assembled my first pressure sensor:
+
+![Photo of a hand next to a small piece of foam, the DIY sensor](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/PressureSensor.jpeg)
+
+Using four sensors like the above, I created an interactive glove (prototype) that controls a basic Processing drawing sketch. I left the thumb empty to allow the glove's wearer to use their thumb to press on the other four fingers, for added control. The four fingers with sensors control the horizontal position, vertical position, size, and warmth (red channel) of the color of the circles being drawn in Processing.
+
+For this experiment, I just went with using masking tape to lightly fix the sensors on the glove -- which was a rubber glove as I did not have anything more proper available. Once I assembled my prototype, this is what I had:
+
+![Two photos in different angles of an interactive rubber glove with foam DIY pressure sensors affixed to the fingers.](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/DrawingGlove.png)
+
+Here is a brief [video](https://drive.google.com/file/d/1mohareurr6Dfzqi_ISjWGye6XnWnpkbV/view?usp=sharing) documentation of the project in action! Using the glove, these are some of the fun images I created:
+
+![Three images with different sized greenish and yellowish circles forming patterns and lines](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/GloveDrawings.png)
+
+On the technical side, the below [Tinkercad](https://www.tinkercad.com/things/aNsRA67E2WX-sizzling-sango/editel?sharecode=jnV3aBeOTYbAliIEe9FE8Nu7chbpnw1LdyP62m9wsnU) diagram shows my wiring - except I was using the "DIY" sensors.
+
+![Tinkercad diagram of four pressure sensors connected to an Arduino.](https://github.com/orsolyasz/PComp-Fall-2021/blob/main/Week%2002/Tinker%20Pressure%20Gloves.png)
+
+My code for the Arduino to read the sensors and forward them to Processing:
+```
+int pressure1 = 0;
+int pressure2 = 0;
+int pressure3 = 0;
+int pressure4 = 0;
+
+byte finger1 = A0;
+byte finger2 = A1;
+byte finger3 = A3;
+byte finger4 = A5;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  delay(100);
+  // put your main code here, to run repeatedly:
+  pressure1 = analogRead(finger1);
+  pressure2 = analogRead(finger2);
+  pressure3 = analogRead(finger3);
+  pressure4 = analogRead(finger4);
+  
+  Serial.print(pressure1);
+  Serial.print(',');
+  Serial.print(pressure2);
+  Serial.print(',');
+  Serial.print(pressure3);
+  Serial.print(',');
+  Serial.print(pressure4);
+  Serial.print(',');
+  Serial.println();
+
+}
+```
+
+My Processing sketch is below. Note that in all the `map()` functions I am using values based on the readings I got from the particular sensors with the particular wiring that I had in my setup. *(Also note that the sketch could maybe use an addition to wait until a serial port is ready, but I really only thought about this once I was completely done as the lack of a wait did not cause too much of a problem - I only had to restart my sketch a few times.)*
+
+```
+import processing.serial.*;
+
+Serial myPort;  // Create object from Serial class
+String val;     // Data received from the serial port
+
+int[] pressures = {0, 0, 0, 0, 0}; // array to store my incoming sensor values
+
+
+float xPos=0;
+float xTarget=0;
+float xPrev=0;
+
+float yPos=0;
+float yTarget=0;
+float yPrev = 0;
+
+int r=200;
+int g=200;
+int b=0;
+int rTarget=200;
+int rPrev=0;
+
+float size=50;
+float sizeTarget=0;
+float sizePrev=0;
+
+void setup()
+{
+     size(1280, 720);
+     background(0);
+  
+  //printArray(Serial.list()); // printing all serial ports to see what port we neeed to use
+  String portName = Serial.list()[9]; //here the 9 changes based on what port we need
+  myPort = new Serial(this, portName, 9600);
+}
+
+void draw()
+{
+  
+  if ( myPort.available() > 0) 
+  {  // If data is available,
+  val = myPort.readStringUntil('\n');         // read it and store it in val
+  } 
+ //println(val); //print it out in the console
+ 
+ if(val!=null){ 
+ pressures= int(split(val, ','));
+ }
+ 
+
+ xTarget=map(pressures[0], 0,265, 0, width); //map incoming data from finger1 to correspond to an x position accross the full width of the screen
+ yTarget=map(pressures[1], 0,80, 0, height); //map incoming data from finger2 to correspond to a y position accross the full height of the screen
+ sizeTarget=map(pressures[2], 0, 100, 20, 100); //map incoming data from finger3 to correspond to an size between 20 and 100 pixels
+ rTarget=int(map(pressures[3]*random(0.7,1.2), 0, 270, 255, 0)); //map incoming data from finger4 to correspond to a red value on the full available scale
+
+ 
+ xPos=xPos-(xPos-xTarget)*0.1; //smoothly change the x position of our circle
+ yPos=yPos-(yPos-yTarget)*0.01; //smoothly change the y position of our circle
+ r=int(r-(r-rTarget)*0.01); //smoothly change the redness of the color of our circle
+ size=size-(size-sizeTarget)*0.01; //smoothly change the size of our circle
+
+ 
+ //println(pressures);
+ 
+ fill(color(r,g,b)); //use new color
+ circle(xPos, yPos, size); //draw the next circle at the new location with the new size
+}
+```
+ 
+
+
+
+
+
+
