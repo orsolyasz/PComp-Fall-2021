@@ -1,5 +1,7 @@
 # Week 4
 
+*Lab 1 was part of the final project so it is included in my final project documentation instead**
+
 ## Lab 2 - Hook up a servo
 
 Here are screenshots of my [Tinkercad](https://www.tinkercad.com/things/lVTFG19bJag-super-elzing/editel?sharecode=qkUXhapHf6PbOWHWwMj3fkh_NIhcWmrRoL4stFDihtE) servo setup, as well as the two bits of code I tested. One Arduino is making the motor switch between 90 and 180 degrees every 3 seconds. The other Arduino is making a motor go slowly/gradually from 0 to 180 degrees (in steps of 5 degrees every 300milliseconds), going back to 0 to restart once it reaches 180.
