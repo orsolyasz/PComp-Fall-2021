@@ -486,8 +486,19 @@ void draw()
 }
 ```
  
+ ## Reflections
+ 
+#### Reflect on creating interfaces for your body. Consider how we engage with tools – how does this impact how your body extends into the tools around you? What possibilities do you see?
 
+This week's most exciting part fot me was definitely the creation of the glove and using that to control my drawing sketch. I find that we often expect tools to immediately reveal their exact affordances to us, we rely on designers to give us immedate access to the intended functions of any tool (we could think of something as complex as phones, somethig as simple as a microwave, or something as recent as zoom/video education, a lot of us are frustrated if there is too much of a learning curve when starting to use something). While I obviously see how easy to use and easy to understand tools are often practically necessary, what I liked about the glove - and what I have enojoyed in interactive art in the past- is exactly need to figure out how something works and what we can do with it.
 
+I find that when I am facing a tool whose purpose is not immediately clear to me, I become much more exploratory about it. If I am not told how to use something but something makes it clear to me that it has a use, it really activates my creativity to see what I could possible use the tool for -whether that use is an intended use or not. Similarly, as a designer, I am alwasy excited to see how I can create tools/objects/art pieces that show an affordance of "useability" (that is, which invite interction), but without giving away what the expected or required use would be. I find this approach often puts me in my body and engages me in a joyful way, and that is what I strive to be able to offer other people.
+
+#### Consider what it means to have the skills to make this device. How does it impact, collide with, and alter your relationship with consumer interfaces?
+
+While this is not my first time using some of these skills or my first time creating an interactive device, I am always reminded of the joy and amazement I felt the first time I saw interactive art. Until then, it had simply never even occured to me that I could aslo literally just take some sensors and build something. While of course I can only speak to my personal experience, I think we do live in a society that makes us so used to getting ready made devices, beutifully pacakged technology, and tools with prescribed uses, that we often do not even know to think of an alternative. In addition, in an almost counterintuitive way, the more prevalent computers and smart phones and internet use are becoming, the more removed we are becoming from a concept of them as just objects that someone once came up with -- objects that we could use, alter, and repair (!!!) ourselves with really not a lot of prior knowledge at all.
+
+In this context, having the skills to make this device -or rather, having the experience of having built basic interactive technology- has for me often meant that I am able to approach even consumer interfaces as tools that I can shape to my liking, and it has demystified computers and electricty a lot in my eyes. At the same time, it is also making me more aware of the actual people that are behind the creation of common consumer interfaces -- the designer/manufacturers whose intentions I try to remain  cautiously critical of, but also the actual people whose labor goes into building parts and devices that we as a society often think of as short-term-use (almost disposable) tools.
 
 
 
